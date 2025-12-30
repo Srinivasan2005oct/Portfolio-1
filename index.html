@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Srinivasan S | Portfolio</title>
+
+    <!-- ===== INTERNAL CSS ===== -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Playfair+Display:wght@600&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: 'Poppins', sans-serif;
+            background: #0b0f1a;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* NAVBAR */
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background: rgba(5,8,20,0.9);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav h1{
+            color: #d4af37;
+            font-family: 'Playfair Display', serif;
+        }
+
+        nav a{
+            color: #fff;
+            margin-left: 20px;
+            text-decoration: none;
+            position: relative;
+        }
+
+        nav a::after{
+            content: '';
+            width: 0;
+            height: 2px;
+            background: #d4af37;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            transition: 0.3s;
+        }
+
+        nav a:hover::after{
+            width: 100%;
+        }
+
+        /* HERO */
+        .hero{
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 60px;
+        }
+
+        .hero-text{
+            max-width: 55%;
+            animation: slideLeft 1.2s ease;
+        }
+
+        .hero h2{
+            font-size: 50px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero span{
+            color: #d4af37;
+        }
+
+        .hero p{
+            margin-top: 15px;
+            color: #ccc;
+            line-height: 1.7;
+        }
+
+        .btn{
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 35px;
+            background: linear-gradient(135deg,#d4af37,#b8962e);
+            color: #000;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn:hover{
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(212,175,55,0.4);
+        }
+
+        .hero img{
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            border: 5px solid #d4af37;
+            object-fit: cover;
+            animation: zoomIn 1.2s ease;
+        }
+
+        /* SECTION */
+        section{
+            padding: 80px 60px;
+        }
+
+        section h2{
+            color: #d4af37;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* GRID */
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 30px;
+        }
+
+        .card{
+            background: linear-gradient(145deg,#0f1428,#151a35);
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+            opacity: 0;
+            transform: translateY(40px);
+            transition: 0.6s;
+        }
+
+        .card h3{
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+
+        .card:hover{
+            transform: translateY(-10px) scale(1.02);
+        }
+
+        .card.show{
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* FOOTER */
+        footer{
+            text-align: center;
+            padding: 20px;
+            background: #050814;
+            color: #aaa;
+        }
+
+        /* ANIMATIONS */
+        @keyframes slideLeft{
+            from{ opacity:0; transform:translateX(-60px); }
+            to{ opacity:1; transform:translateX(0); }
+        }
+
+        @keyframes zoomIn{
+            from{ opacity:0; transform:scale(0.6); }
+            to{ opacity:1; transform:scale(1); }
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:900px){
+            .hero{
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-text{
+                max-width: 100%;
+            }
+            .hero img{
+                margin-top: 40px;
+            }
+            .grid{
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <h1>Srinivasan S</h1>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-text">
+        <h2>Hello, I'm <span>Srinivasan S</span></h2>
+        <p>
+            A passionate Computer Science Engineering student with strong interest in
+            UI/UX design, web development, and creative digital solutions.
+        </p>
+        <p>
+            I enjoy transforming ideas into visually elegant and user-friendly
+            interfaces using modern design principles and clean code.
+        </p>
+        <a href="projects.html" class="btn">View My Projects</a>
+    </div>
+
+    <img src="WhatsApp Image 2025-07-01 at 21.20.11_36721114-modified.png" alt="Profile Photo">
+</div>
+
+<!-- WHAT I DO -->
+<section>
+    <h2>What I Do</h2>
+    <div class="grid">
+        <div class="card"> 
+            <h3>UI / UX Design</h3>
+            <p>Intuitive user interfaces with proper hierarchy and visual balance.</p>
+        </div>
+
+        <div class="card">
+            <h3>Web Development</h3>
+            <p>Responsive and modern websites using HTML, CSS & JavaScript.</p>
+        </div>
+
+        <div class="card">
+            <h3>Problem Solving</h3>
+            <p>Logical and optimized solutions through structured programming.</p>
+        </div>
+
+        <div class="card">
+            <h3>Creative Editing</h3>
+            <p>Engaging influencer-style edits using CapCut and motion effects.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2025 Srinivasan
+</footer>
+
+<!-- ===== SCROLL ANIMATION JS ===== -->
+<script>
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+    cards.forEach(card => {
+        const rect = card.getBoundingClientRect().top;
+        const trigger = window.innerHeight - 100;
+        if(rect < trigger){
+            card.classList.add('show');
+        }
+    });
+});
+</script>
+
+</body>
+</html>

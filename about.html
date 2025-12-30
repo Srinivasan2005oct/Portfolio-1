@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About | Srinivasan S</title>
+
+    <!-- Existing main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Extra CSS ONLY for certificates -->
+    <style>
+        /* Certificate Layout */
+        .cert-list{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 30px;
+            margin-top: 25px;
+        }
+
+        .cert-card{
+            background: #11162a;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 4px solid #d4af37;
+        }
+
+        .cert-card h3{
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+
+        .view-btn{
+            padding: 10px 25px;
+            background: linear-gradient(135deg,#d4af37,#b8962e);
+            color: #000;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .view-btn:hover{
+            transform: scale(1.05);
+        }
+
+        /* Certificate Image Box */
+        .cert-img-box{
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+            animation: fadeZoom 0.6s ease;
+        }
+
+        .cert-img-box img{
+            width: 90%;
+            max-width: 500px;
+            border-radius: 15px;
+            border: 4px solid #d4af37;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+        }
+
+        @keyframes fadeZoom{
+            from{opacity:0; transform:scale(0.85);}
+            to{opacity:1; transform:scale(1);}
+        }
+
+        @media(max-width:700px){
+            .cert-list{ grid-template-columns:1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <h1>Srinivasan S</h1>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+    </div>
+</nav>
+
+<section>
+
+    <h2>About Me</h2>
+    <div class="card">
+        <p>
+            I am Srinivasan S, a 3rd-year Computer Science Engineering student at
+            National Engineering College. I have a deep interest in designing
+            and developing digital products that solve real-world problems.
+        </p>
+        <p>
+            I am continuously improving my skills in UI/UX design, front-end
+            development, and creative thinking to meet modern industry standards.
+        </p>
+    </div>
+
+    <h2>Career Objective</h2>
+    <div class="card">
+        <p>
+            To work in a challenging environment where I can apply my technical
+            and design skills to create meaningful digital experiences while
+            continuously learning and growing as a professional.
+        </p>
+    </div>
+
+    <h2>Education</h2>
+    <div class="card">
+        <p><strong>B.E – Computer Science Engineering</strong></p>
+        <p>National Engineering College, Tamil Nadu</p>
+        <p>2022 – 2026</p>
+    </div>
+
+    <h2>Technical Skills</h2>
+    <div class="grid">
+        <div class="card">HTML & CSS</div>
+        <div class="card">JavaScript (Basics)</div>
+        <div class="card">Java Programming</div>
+        <div class="card">MySQL Database</div>
+        <div class="card">UI/UX Design – Figma</div>
+        <div class="card">Git & GitHub (Basic)</div>
+    </div>
+
+    <h2>Soft Skills</h2>
+    <div class="grid">
+        <div class="card">Communication Skills</div>
+        <div class="card">Team Collaboration</div>
+        <div class="card">Time Management</div>
+        <div class="card">Creative Thinking</div>
+    </div>
+
+    <!-- ===== CERTIFICATIONS (UPDATED) ===== -->
+    <h2>Certifications</h2>
+
+    <div class="cert-list">
+
+        <!-- Certificate 1 -->
+        <div class="cert-card">
+            <h3>NPTEL – Internet of Things</h3>
+            <button class="view-btn" onclick="toggleCert('cert1')">
+                View Certificate
+            </button>
+
+            <div class="cert-img-box" id="cert1">
+                <img src="Screenshot 2025-12-27 145707.png" alt="IoT Certificate">
+            </div>
+        </div>
+
+        <!-- Certificate 2 -->
+        <div class="cert-card">
+            <h3>Introduction to UI/UX Design – Figma</h3>
+            <button class="view-btn" onclick="toggleCert('cert2')">
+                View Certificate
+            </button>
+
+            <div class="cert-img-box" id="cert2">
+                <img src="image.png" alt="UI/UX Certificate">
+            </div>
+        </div>
+
+    </div>
+    <!-- ===== END CERTIFICATIONS ===== -->
+
+    <h2>Interests</h2>
+    <div class="card">
+        <p>
+            UI/UX Design, Web Technologies, Video Editing,
+            Badminton, Travel, and Exploring new tech trends.
+        </p>
+    </div>
+
+</section>
+
+<footer>
+    © 2025 Srinivasan
+</footer>
+
+<script>
+function toggleCert(id){
+    const box = document.getElementById(id);
+    box.style.display = box.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
